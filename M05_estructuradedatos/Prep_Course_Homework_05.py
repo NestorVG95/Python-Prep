@@ -6,7 +6,8 @@
 # 1) Crear una lista que contenga nombres de ciudades del mundo que contenga más de 5 elementos e imprimir por pantalla
 
 # In[3]:
-
+Var1= ["Bucaramanga","Medellin","Cali","Barranquilla","Cartagena","Sogamoso","Bogotá"]
+print(Var1)
 
 
 
@@ -14,14 +15,14 @@
 
 # In[4]:
 
-
+print(Var1[1])
 
 
 # 3) Imprimir por pantalla del segundo al cuarto elemento
 
 # In[8]:
 
-
+print(Var1[1:4])
 
 
 
@@ -29,7 +30,7 @@
 
 # In[12]:
 
-
+type(Var1)
 
 
 
@@ -37,7 +38,7 @@
 
 # In[14]:
 
-
+print(Var1[2:])
 
 
 
@@ -45,7 +46,7 @@
 
 # In[15]:
 
-
+print(Var1[:4])
 
     
 
@@ -54,7 +55,9 @@
 
 # In[16]:
 
-
+Var1.append("Medellin") #Aparentemente todo esta bien
+Var1.append("Buenaventura")
+print(Var1)
 
 
 
@@ -65,7 +68,8 @@
 # 8) Agregar otra ciudad, pero en la cuarta posición
 
 # In[20]:
-
+Var1.insert(4,"San Gil")
+print(Var1)
 
 
 
@@ -79,14 +83,16 @@
 
 # In[22]:
 
-
+Var2 = ["Tunja","Pasto","Rio Negro","Tokio"]
+Var1.extend(Var2)
+print(Var1)
 
 
 # 10) Encontrar el índice de la ciudad que en el punto 7 agregamos duplicada. ¿Se nota alguna particularidad?
 
 # In[23]:
 
-
+Var1.index("Medellin") # Solo aparece el primer resultado de la busqueda
 
 
 
@@ -95,14 +101,15 @@
 # In[24]:
 
 
-
+Var1.index("San Martin") # Da error porque el valor no existe en la lista y por tanto no tiene indice
 
 
 # 12) Eliminar un elemento de la lista
 
 # In[25]:
 
-
+Var1.remove("Cali")
+print(Var1)
 
 
 
@@ -110,7 +117,7 @@
 
 # In[27]:
 
-
+Var1.remove("San Andres") #Genera error no puede ejecutar algo que no existe
 
 
 
@@ -118,7 +125,8 @@
 
 # In[28]:
 
-
+Var3 = Var1.pop(-1)
+print(Var3)
 
 
 
@@ -126,28 +134,30 @@
 
 # In[29]:
 
-
+print(Var1*4)
 
 
 # 16) Crear una tupla que contenga los números enteros del 1 al 20
 
 # In[32]:
 
-
+Var4 = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+print(Var4)
 
 
 # 17) Imprimir desde el índice 10 al 15 de la tupla
 
 # In[35]:
 
-
+print(Var4[9:15])
 
 
 # 18) Evaluar si los números 20 y 30 están dentro de la tupla
 
 # In[41]:
 
-
+print(20 in Var4)
+print(30 in Var4)
 
 
 
@@ -155,7 +165,13 @@
 
 # In[48]:
 
-
+Var5= "Paris"
+if Var5 in Var1:
+    print("La lista ya contenía a ", Var5)
+else:
+    Var1.append(Var5)
+    print(Var5," No estaba en la lista y fué añadido")
+print(Var1)
 
 
 
@@ -163,7 +179,8 @@
 
 # In[51]:
 
-
+print(Var4.count(4))
+print(Var1.count("Bucaramanga"))
 
 
 
@@ -171,7 +188,8 @@
 
 # In[52]:
 
-
+Var6 = list(Var4)
+print(Var6)
 
 
 
@@ -179,7 +197,10 @@
 
 # In[55]:
 
-
+Var7= Var4[0]
+Var8= Var4[1]
+Var9= Var4[2]
+print(Var7,Var8,Var9)
 
 
 
@@ -187,7 +208,7 @@
 
 # In[57]:
 
-
+Var10 = {"ciudad":Var1,"Pais":["Colombia","Francia","Japon"],"Continente": ["Europa", "America", "Asia"]}
 
 
 
@@ -196,13 +217,15 @@
 
 # In[59]:
 
-
+Var10.keys()
 
 
 # 25) Imprimir las ciudades a través de su clave
 
 # In[61]:
+print(Var10["ciudad"])
 
 
 
 
+# %%
